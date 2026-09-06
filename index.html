@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Cardápio online da Santa Chapa Lanches."
+  >
+
+  <title>Santa Chapa Lanches | Cardápio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+
+    <a
+      class="logo"
+      href="#inicio"
+      aria-label="Santa Chapa Lanches"
+    >
+
+      <img
+        src="./img/LOGO_SANTA_CHAPA.png"
+        alt="Logo Santa Chapa Lanches"
+      >
+
+    </a>
+
+    <nav>
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#cardapio">
+        Cardápio
+      </a>
+
+      <a href="#contato">
+        Contato
+      </a>
+
+    </nav>
+
+    <button
+      class="botao-carrinho"
+      id="abrirCarrinho"
+      type="button"
+    >
+      🛒 Carrinho
+
+      <span id="contadorCarrinho">
+        0
+      </span>
+    </button>
+
+  </header>
+
+  <main>
+
+    <section class="inicio" id="inicio">
+
+      <div class="inicio-texto">
+
+        <p class="etiqueta">
+          BATEU A FOME?
+        </p>
+
+        <h1>
+          O sabor que
+          <br>
+          <em>faz a diferença.</em>
+        </h1>
+
+        <p>
+          Escolha seus lanches, porções e bebidas.
+          Monte seu pedido e envie diretamente
+          para nosso WhatsApp.
+        </p>
+
+        <div class="acoes-inicio">
+
+          <a
+            class="botao-principal"
+            href="#cardapio"
+          >
+            Ver cardápio
+          </a>
+
+          <a
+            class="botao-principal botao-whatsapp"
+            href="https://wa.me/5548996015559?text=Ol%C3%A1%2C%20Santa%20Chapa%20Lanches!%20Gostaria%20de%20falar%20com%20o%20atendimento."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="selo">
+
+        <img 
+          src="./img/LOGO_REDONDA.png"
+          alt="Santa Chapa Lanches"
+        >
+
+      </div>
+
+    </section>
+
+    <section class="cardapio" id="cardapio">
+
+      <div class="titulo-secao">
+
+        <p class="etiqueta">
+          NOSSO CARDÁPIO
+        </p>
+
+        <h2>
+          Escolha o que deseja
+        </h2>
+
+        <p>
+          Selecione uma categoria e escolha seus produtos.
+        </p>
+
+      </div>
+
+      <!-- BOTÕES DAS CATEGORIAS -->
+
+      <div class="filtros-cardapio">
+
+        <button
+          class="filtro-cardapio ativo"
+          type="button"
+          data-filtro="todos"
+        >
+          Todos
+        </button>
+
+        <button
+          class="filtro-cardapio"
+          type="button"
+          data-filtro="lanches"
+        >
+          🍔 Lanches
+        </button>
+
+        <button
+          class="filtro-cardapio"
+          type="button"
+          data-filtro="porcoes"
+        >
+          🍟 Porções
+        </button>
+
+        <button
+          class="filtro-cardapio"
+          type="button"
+          data-filtro="bebidas"
+        >
+          🥤 Bebidas
+        </button>
+
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- LANCHES                                               -->
+      <!-- ===================================================== -->
+
+      <section
+        class="categoria"
+        id="lanches"
+        data-categoria="lanches"
+      >
+
+        <div class="titulo-categoria">
+
+          <span>🍔</span>
+
+          <div>
+
+            <p>
+              PREPARADOS NA HORA
+            </p>
+
+            <h2>
+              Lanches
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="grade-produtos">
+
+          <!-- X-BURGUER -->
+
+          <div
+            class="produto"
+            data-nome="X-Burguer"
+            data-preco="18.00"
+            data-opcionais="Bacon extra|5;Queijo extra|3;Ovo|2;Hambúrguer extra|7"
+          >
+
+            <img
+              src="./img/x-burguer.jpg"
+              alt="X-Burguer"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                LANCHE
+              </span>
+
+              <h3>
+                X-Burguer
+              </h3>
+
+              <p>
+                Pão, hambúrguer, queijo, presunto,
+                alface, tomate e molho especial.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 18,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- X-SALADA -->
+
+          <div
+            class="produto"
+            data-nome="X-Salada"
+            data-preco="22.00"
+            data-opcionais="Bacon extra|5;Queijo extra|3;Ovo|2;Hambúrguer extra|7"
+          >
+
+            <img
+              src="./img/x-salada.jpg"
+              alt="X-Salada"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                LANCHE
+              </span>
+
+              <h3>
+                X-Salada
+              </h3>
+
+              <p>
+                Pão, hambúrguer, queijo, presunto,
+                ovo, alface, tomate e molho especial.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 22,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- X-BACON -->
+
+          <div
+            class="produto"
+            data-nome="X-Bacon"
+            data-preco="27.00"
+            data-opcionais="Queijo extra|3;Ovo|2;Hambúrguer extra|7;Calabresa extra|5"
+          >
+
+            <img
+              src="./img/x-bacon.jpg"
+              alt="X-Bacon"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                LANCHE
+              </span>
+
+              <h3>
+                X-Bacon
+              </h3>
+
+              <p>
+                Pão, hambúrguer, queijo, bacon,
+                ovo, salada e molho especial.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 27,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- X-TUDO -->
+
+          <div
+            class="produto"
+            data-nome="X-Tudo"
+            data-preco="32.00"
+            data-opcionais="Bacon extra|5;Queijo extra|3;Hambúrguer extra|7;Coração extra|6"
+          >
+
+            <img
+              src="./img/x-tudo.jpg"
+              alt="X-Tudo"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                LANCHE
+              </span>
+
+              <h3>
+                X-Tudo
+              </h3>
+
+              <p>
+                Pão, dois hambúrgueres, queijo,
+                presunto, bacon, ovo, salada e molho.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 32,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- PORÇÕES                                               -->
+      <!-- ===================================================== -->
+
+      <section
+        class="categoria"
+        id="porcoes"
+        data-categoria="porcoes"
+      >
+
+        <div class="titulo-categoria">
+
+          <span>🍟</span>
+
+          <div>
+
+            <p>
+              PARA COMPARTILHAR
+            </p>
+
+            <h2>
+              Porções
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="grade-produtos">
+
+          <!-- BATATA FRITA -->
+
+          <div
+            class="produto"
+            data-nome="Batata Frita"
+            data-preco="25.00"
+            data-opcionais="Cheddar|4;Bacon|5;Queijo ralado|3;Molho especial|2"
+          >
+
+            <img
+              src="./img/batata-frita.jpg"
+              alt="Batata frita"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                PORÇÃO
+              </span>
+
+              <h3>
+                Batata Frita
+              </h3>
+
+              <p>
+                Porção de batatas fritas crocantes
+                com molho especial da casa.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 25,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- BATATA COM BACON -->
+
+          <div
+            class="produto"
+            data-nome="Batata com Bacon"
+            data-preco="35.00"
+            data-opcionais="Cheddar|4;Queijo ralado|3;Calabresa|5;Molho especial|2"
+          >
+
+            <img
+              src="./img/batata-bacon.jpg"
+              alt="Batata com bacon"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                PORÇÃO
+              </span>
+
+              <h3>
+                Batata com Bacon
+              </h3>
+
+              <p>
+                Batata frita coberta com queijo
+                derretido e bacon crocante.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 35,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CALABRESA ACEBOLADA -->
+
+          <div
+            class="produto"
+            data-nome="Calabresa Acebolada"
+            data-preco="38.00"
+            data-opcionais="Queijo|5;Bacon|6;Batata frita|8;Molho especial|2"
+          >
+
+            <img
+              src="./img/calabresa.jpg"
+              alt="Calabresa acebolada"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                PORÇÃO
+              </span>
+
+              <h3>
+                Calabresa Acebolada
+              </h3>
+
+              <p>
+                Calabresa acebolada acompanhada
+                de pão e molho especial.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 38,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- BEBIDAS                                               -->
+      <!-- ===================================================== -->
+
+      <section
+        class="categoria"
+        id="bebidas"
+        data-categoria="bebidas"
+      >
+
+        <div class="titulo-categoria">
+
+          <span>🥤</span>
+
+          <div>
+
+            <p>
+              PARA REFRESCAR
+            </p>
+
+            <h2>
+              Bebidas
+            </h2>
+
+          </div>
+
+        </div>
+
+        <div class="grade-produtos">
+
+          <!-- REFRIGERANTE LATA -->
+
+          <div
+            class="produto"
+            data-nome="Refrigerante Lata"
+            data-preco="6.00"
+            data-opcionais="Gelo|0;Limão|1"
+          >
+
+            <img
+              src="./img/refrigerante-lata.jpg"
+              alt="Refrigerante lata"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                BEBIDA
+              </span>
+
+              <h3>
+                Refrigerante Lata
+              </h3>
+
+              <p>
+                Escolha o sabor disponível.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 6,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- REFRIGERANTE 2 LITROS -->
+
+          <div
+            class="produto"
+            data-nome="Refrigerante 2 Litros"
+            data-preco="14.00"
+            data-opcionais="Gelo|0;Limão|1;Copos descartáveis|1"
+          >
+
+            <img
+              src="./img/refrigerante-2l.jpg"
+              alt="Refrigerante 2 litros"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                BEBIDA
+              </span>
+
+              <h3>
+                Refrigerante 2 Litros
+              </h3>
+
+              <p>
+                Escolha o sabor disponível.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 14,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ÁGUA MINERAL -->
+
+          <div
+            class="produto"
+            data-nome="Água Mineral"
+            data-preco="4.00"
+            data-opcionais="Com gás|1;Gelo|0;Limão|1"
+          >
+
+            <img
+              src="./img/agua.jpg"
+              alt="Água mineral"
+            >
+
+            <div class="produto-info">
+
+              <span class="tipo">
+                BEBIDA
+              </span>
+
+              <h3>
+                Água Mineral
+              </h3>
+
+              <p>
+                Garrafa de água mineral gelada.
+              </p>
+
+              <div class="produto-final">
+
+                <strong>
+                  R$ 4,00
+                </strong>
+
+                <button
+                  class="adicionar"
+                  type="button"
+                >
+                  Adicionar +
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer id="contato">
+
+    <div class="logo">
+
+      <img
+        src="./img/logo-santa-chapa.png"
+        alt="Logo Santa Chapa Lanches"
+      >
+
+    </div>
+
+    <p>
+      Pedidos online • Feito com carinho para você
+    </p>
+
+    <p>
+      © <span id="anoAtual"></span>
+      Santa Chapa Lanches
+    </p>
+
+  </footer>
+
+  <!-- FUNDO ESCURO DO CARRINHO -->
+
+  <div
+    class="fundo-modal"
+    id="fundoModal"
+  ></div>
+
+  <!-- CARRINHO -->
+
+  <aside
+    class="carrinho"
+    id="carrinho"
+  >
+
+    <div class="carrinho-topo">
+
+      <div>
+
+        <small>
+          SEU PEDIDO
+        </small>
+
+        <h2>
+          Carrinho
+        </h2>
+
+      </div>
+
+      <button
+        id="fecharCarrinho"
+        type="button"
+      >
+        ✕
+      </button>
+
+    </div>
+
+    <div
+      class="lista-carrinho"
+      id="listaCarrinho"
+    >
+
+      <div class="carrinho-vazio">
+
+        <span>🛒</span>
+
+        <strong>
+          Seu carrinho está vazio
+        </strong>
+
+        <p>
+          Adicione algum produto do cardápio.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="valorTotal">
+        R$ 0,00
+      </strong>
+
+    </div>
+
+    <form id="formPedido">
+
+      <h3>
+        Informações do pedido
+      </h3>
+
+      <label>
+
+        Seu nome
+
+        <input
+          type="text"
+          id="nomeCliente"
+          required
+          placeholder="Digite seu nome"
+        >
+
+      </label>
+
+      <div class="escolha">
+
+        <label>
+
+          <input
+            type="radio"
+            name="recebimento"
+            value="Entrega"
+            checked
+          >
+
+          Entrega
+
+        </label>
+
+        <label>
+
+          <input
+            type="radio"
+            name="recebimento"
+            value="Retirada"
+          >
+
+          Retirada
+
+        </label>
+
+      </div>
+
+      <div id="campoEndereco">
+
+        <label>
+
+          Endereço
+
+          <input
+            type="text"
+            id="endereco"
+            placeholder="Rua, número e bairro"
+          >
+
+        </label>
+
+        <button
+          class="botao-localizacao"
+          id="usarLocalizacao"
+          type="button"
+        >
+          Usar minha localização atual
+        </button>
+
+        <p
+          class="status-localizacao"
+          id="statusLocalizacao"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+      <label>
+
+        Forma de pagamento
+
+        <select id="pagamento" required>
+
+          <option value="">
+            Selecione
+          </option>
+
+          <option value="Pix">
+            Pix
+          </option>
+
+          <option value="Cartão">
+            Cartão
+          </option>
+
+          <option value="Dinheiro">
+            Dinheiro
+          </option>
+
+        </select>
+
+      </label>
+
+      <div
+        id="campoTroco"
+        hidden
+      >
+
+        <label>
+
+          Troco para quanto?
+
+          <input
+            type="text"
+            id="troco"
+            placeholder="Ex: R$ 50,00"
+          >
+
+        </label>
+
+      </div>
+
+      <label>
+
+        Observação geral
+
+        <textarea
+          id="observacaoGeral"
+          placeholder="Ex: tocar a campainha"
+        ></textarea>
+
+      </label>
+
+      <button
+        class="finalizar"
+        type="submit"
+      >
+        Enviar pedido pelo WhatsApp
+      </button>
+
+      <button
+        class="continuar"
+        id="continuarPedindo"
+        type="button"
+      >
+        ← Continuar pedindo
+      </button>
+
+    </form>
+
+  </aside>
+
+  <!-- JANELA PARA ESCREVER A OBSERVAÇÃO -->
+
+  <div
+    class="modal-observacao"
+    id="modalObservacao"
+  >
+
+    <div class="modal-caixa">
+
+      <button
+        class="fechar-observacao"
+        id="fecharObservacao"
+        type="button"
+      >
+        ✕
+      </button>
+
+      <small>
+        ADICIONAR AO PEDIDO
+      </small>
+
+      <h2 id="nomeObservacao">
+        Produto
+      </h2>
+
+      <div
+        class="area-opcionais"
+        id="areaOpcionais"
+      >
+
+        <p class="titulo-opcionais">
+          Selecione os adicionais
+        </p>
+
+        <div id="listaOpcionais"></div>
+
+      </div>
+
+      <label>
+
+        Observação do item
+
+        <textarea
+          id="observacaoItem"
+          placeholder="Ex: sem cebola, sem tomate..."
+        ></textarea>
+
+      </label>
+
+      <p class="total-item-modal">
+        Total do item:
+
+        <strong id="totalItemModal">
+          R$ 0,00
+        </strong>
+      </p>
+
+      <button
+        class="confirmar-item"
+        id="confirmarItem"
+        type="button"
+      >
+        Adicionar ao carrinho
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- CARRINHO FLUTUANTE DO CELULAR -->
+
+  <button
+    class="carrinho-flutuante"
+    id="carrinhoFlutuante"
+    type="button"
+  >
+    🛒
+
+    <span id="contadorFlutuante">
+      0
+    </span>
+  </button>
+
+  <div
+    class="aviso"
+    id="aviso"
+  ></div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
