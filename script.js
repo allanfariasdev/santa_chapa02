@@ -221,6 +221,27 @@ function dinheiro(valor) {
 
 
 // ================================================================
+// CALCULAR PREÇO UNITÁRIO COM OS ADICIONAIS
+// ================================================================
+
+function calcularPrecoUnitario(item) {
+
+  const totalAdicionais =
+    item.adicionais.reduce(
+      function (soma, adicional) {
+
+        return soma + adicional.preco;
+
+      },
+      0
+    );
+
+  return item.precoBase + totalAdicionais;
+
+}
+
+
+// ================================================================
 // LER OS OPCIONAIS DO HTML
 //
 // FORMATO:
@@ -275,7 +296,7 @@ function lerOpcionais(texto) {
 
 
 // ================================================================
-// ATUALIZAR TOTAL DO PRODUTO NO MODAL
+// MOSTRAR SOMENTE O PREÇO ORIGINAL NO MODAL
 // ================================================================
 
 function atualizarTotalItemModal() {
@@ -284,30 +305,9 @@ function atualizarTotalItemModal() {
     return;
   }
 
-  const totalAdicionais =
-    Array.from(
-      listaOpcionais.querySelectorAll(
-        'input[type="checkbox"]:checked'
-      )
-    )
-      .reduce(
-        function (soma, checkbox) {
-
-          return (
-            soma +
-            Number(
-              checkbox.dataset.preco
-            )
-          );
-
-        },
-        0
-      );
-
   totalItemModal.textContent =
     dinheiro(
-      produtoSelecionado.preco +
-      totalAdicionais
+      produtoSelecionado.preco
     );
 
 }
@@ -710,13 +710,15 @@ function atualizarCarrinho() {
       0
     );
 
+  // Aqui os adicionais entram somente no total final.
+
   const total =
     carrinho.reduce(
       function (soma, item) {
 
         return (
           soma +
-          item.preco *
+          calcularPrecoUnitario(item) *
           item.quantidade
         );
 
@@ -856,7 +858,7 @@ function atualizarCarrinho() {
               <p class="item-observacao">
 
                 ${dinheiro(
-                  item.preco *
+                  item.precoBase *
                   item.quantidade
                 )}
 
@@ -1133,7 +1135,7 @@ document
                 `${item.quantidade}x ` +
                 `${item.nome} — ` +
                 `${dinheiro(
-                  item.preco *
+                  item.precoBase *
                   item.quantidade
                 )}` +
                 adicionais +
@@ -1144,13 +1146,15 @@ document
           )
           .join("\n");
 
+      // Total enviado ao WhatsApp com os adicionais.
+
       const total =
         carrinho.reduce(
           function (soma, item) {
 
             return (
               soma +
-              item.preco *
+              calcularPrecoUnitario(item) *
               item.quantidade
             );
 
