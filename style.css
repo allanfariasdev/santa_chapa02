@@ -512,7 +512,7 @@ a {
 
   border-radius: 10px;
 
-  background: var(--preto);
+  background: green ;
   color: white;
 
   font-size: 11px;
@@ -1189,4 +1189,10 @@ textarea {
   color: #555;
   font-size: 12px;
   line-height: 1.5;
+}
+
+#listaOpcionais {
+  max-height: 280px !important;
+  overflow-y: auto !important;
+  padding-right: 8px;
 }
