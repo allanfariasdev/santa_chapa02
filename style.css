@@ -885,6 +885,9 @@ textarea {
 
   padding: 20px;
 
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
   display: grid;
   place-items: center;
 
@@ -905,7 +908,12 @@ textarea {
 
 .modal-caixa {
   width: min(430px, 100%);
+  max-height: calc(100dvh - 40px);
   padding: 27px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 
   position: relative;
 
@@ -1192,7 +1200,7 @@ textarea {
 }
 
 #listaOpcionais {
-  max-height: 280px !important;
-  overflow-y: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
   padding-right: 8px;
 }
