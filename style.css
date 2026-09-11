@@ -1210,3 +1210,300 @@ textarea {
   overflow: visible !important;
   padding-right: 8px;
 }
+
+/* =========================================
+   NOVO RODAPÉ SANTA CHAPA
+========================================= */
+
+.rodape-santa {
+  width: 100%;
+  padding: 55px 20px 25px;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 183, 0, 0.12),
+      transparent 40%
+    ),
+    #090909;
+  color: #ffffff;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.rodape-conteudo {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* LOGO */
+
+.rodape-logo {
+  display: block;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 30px;
+  object-fit: contain;
+}
+
+/* ÁREA DOS BOTÕES */
+
+.rodape-botoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 35px;
+}
+
+/* BOTÃO GERAL */
+
+.rodape-botao {
+  display: flex;
+  align-items: center;
+  min-height: 86px;
+  padding: 15px 22px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.rodape-botao:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.08);
+}
+
+.rodape-botao:active {
+  transform: scale(0.98);
+}
+
+/* BOTÃO WHATSAPP */
+
+.botao-whatsapp-rodape {
+  background: linear-gradient(
+    135deg,
+    #25d366,
+    #079b3c
+  );
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.botao-whatsapp-rodape:hover {
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.25);
+}
+
+/* BOTÃO LOCALIZAÇÃO */
+
+.botao-localizacao-rodape {
+  background: linear-gradient(
+    135deg,
+    #f52e2e,
+    #b70707
+  );
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.botao-localizacao-rodape:hover {
+  box-shadow: 0 15px 35px rgba(245, 46, 46, 0.25);
+}
+
+/* ÍCONES */
+
+.rodape-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  margin-right: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* TEXTO DOS BOTÕES */
+
+.rodape-botao-texto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.rodape-botao-texto small {
+  margin-bottom: 3px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rodape-botao-texto strong {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.rodape-seta {
+  margin-left: 12px;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* TELEFONE E ENDEREÇO */
+
+.rodape-informacoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  margin: 0 auto 32px;
+}
+
+.rodape-informacoes a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.rodape-informacoes a:hover {
+  color: #ffb800;
+}
+
+.rodape-informacoes a > span:first-child {
+  color: #ffb800;
+  font-size: 23px;
+}
+
+/* LINHA E DIREITOS */
+
+.rodape-linha {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 22px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.rodape-direitos {
+  margin: 0;
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+  .rodape-santa {
+    padding: 38px 16px 22px;
+  }
+
+  .rodape-logo {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 25px;
+  }
+
+  .rodape-botoes {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 430px;
+    margin-bottom: 30px;
+  }
+
+  .rodape-botao {
+    width: 100%;
+    min-height: 78px;
+    padding: 12px 16px;
+    border-radius: 16px;
+  }
+
+  .rodape-icone {
+    width: 46px;
+    height: 46px;
+    margin-right: 13px;
+    font-size: 21px;
+  }
+
+  .rodape-botao-texto strong {
+    font-size: 20px;
+  }
+
+  .rodape-seta {
+    font-size: 32px;
+  }
+
+  .rodape-informacoes {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .rodape-informacoes a {
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 380px) {
+
+  .rodape-santa {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .rodape-logo {
+    width: 115px;
+    height: 115px;
+  }
+
+  .rodape-botao {
+    padding: 11px 13px;
+  }
+
+  .rodape-botao-texto strong {
+    font-size: 18px;
+  }
+
+  .rodape-botao-texto small {
+    font-size: 10px;
+  }
+
+  .rodape-informacoes a {
+    font-size: 13px;
+  }
+
+}
+
+.rodape-icone img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
